@@ -33,7 +33,7 @@
         </div>
         <div v-else-if="selectedModel === 'model3'">
           <!-- Content for Model 3 -->
-          <h2>Model 3 Content</h2>
+          <DynamicForm :schema="formSchema2['fields']" :title="formSchema2['title']" :subtitle="formSchema2['subtitle']"/>
         </div>
         <div v-else>
           <!-- Default content when no model is selected -->
@@ -58,25 +58,39 @@ export default {
         title: "Sign Up Form",
         subtitle: "",
         fields: {
-          field1: {
+          email: {
             label: 'Email',
             type: 'email',
           },
-          field2: {
+          password: {
             label: 'Password',
             type: 'password',
           },
-          field3: {
+          height: {
             label: 'Height (Inches)',
             type: 'number',
           },
-          field4: {
+          dob: {
             label: 'Date of Birth',
             type: 'date',
           },
-          fileField: {
+          loa: {
             label: 'Letter of application',
             type: 'file',
+          }
+        }
+      },
+      formSchema2: {
+        title: "Try our newest house price estimation model",
+        subtitle: "Add house properties to estimate it's price",
+        fields: {
+          location: {
+            label: 'Location',
+            type: 'text',
+          },
+          doc: {
+            label: 'Date of construction',
+            type: 'date',
           }
         }
       },
