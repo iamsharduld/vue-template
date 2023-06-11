@@ -21,8 +21,8 @@
   
 <style scoped>
 .dynamic-form {
-max-width: 400px;
-margin: 0 auto;
+    max-width: 400px;
+    margin: 0 auto;
 }
 </style>
   

@@ -55,19 +55,27 @@ export default {
   data() {
     return {
       formSchema: {
-        title: "Test",
-        subtitle: "Test 2",
+        title: "Sign Up Form",
+        subtitle: "",
         fields: {
           field1: {
-            label: 'Field 1',
-            type: 'text',
+            label: 'Email',
+            type: 'email',
           },
           field2: {
-            label: 'Field 2',
+            label: 'Password',
+            type: 'password',
+          },
+          field3: {
+            label: 'Height (Inches)',
             type: 'number',
           },
+          field4: {
+            label: 'Date of Birth',
+            type: 'date',
+          },
           fileField: {
-            label: 'File Field',
+            label: 'Letter of application',
             type: 'file',
           }
         }
